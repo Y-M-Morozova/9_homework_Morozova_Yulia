@@ -28,17 +28,21 @@
     
     И заполняю эту таблицу сгенерированными записями (100 строк) , для метода генерации случайных данных - использую ``random()`` и ``generate_series`` :
 
-```sql
-INSERT INTO test_backup.document_template(id,name, short_description, author, description,content, last_updated,created)
-SELECT id, 'name', md5(random()::text), 'name2'
-      ,md5(random()::text),md5(random()::text)
-      ,NOW() - '1 day'::INTERVAL * (RANDOM()::int * 100)
-      ,NOW() - '1 day'::INTERVAL * (RANDOM()::int * 100 + 100)
-FROM generate_series(1,100) id;
-```
+    ```sql
+        INSERT INTO test_backup.document_template(id,name, short_description, author, description,content, last_updated,created)
+        SELECT id, 'name', md5(random()::text), 'name2'
+        ,md5(random()::text),md5(random()::text)
+        ,NOW() - '1 day'::INTERVAL * (RANDOM()::int * 100)
+        ,NOW() - '1 day'::INTERVAL * (RANDOM()::int * 100 + 100)
+        FROM generate_series(1,100) id;
+    ```
 
-<br/><br/>
+    Все ок:
 
-    ![3](https://github.com/Y-M-Morozova/9_homework_Morozova_Yulia/assets/153178571/4ff1d4ae-e488-4410-a2e1-e5e89943ec04)
+    ![3](https://github.com/Y-M-Morozova/9_homework_Morozova_Yulia/assets/153178571/d2f9a0f4-07b4-409a-a8b9-567603d40e6d)
+
+
+   
+    
 
     
