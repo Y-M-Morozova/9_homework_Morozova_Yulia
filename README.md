@@ -8,17 +8,37 @@
 
 **Цель: применить логический бэкап. Восстановиться из бэкапа.**
 
-1. На моей ранее созданной ВМ в ЯО устанавливаю устанавливаю PostgreSQL 15 версии, подключаюсь к нему, для тестов создаю БД ``otus_backup``, в этой БД создаю схему ``test_backup``:
+1. На моей ранее созданной ВМ в ЯО устанавливаю устанавливаю PostgreSQL 15 версии, подключаюсь к нему, для тестов создаю БД ``otus_backup``, в этой БД создаю схему ``test_backup`` :
 
     ![1](https://github.com/Y-M-Morozova/9_homework_Morozova_Yulia/assets/153178571/fa1b6f4a-9012-437d-a95d-4a5ba24f4b40)
 
-
-
-
-
-
-
+    В этой схеме создаю таблицу скриптом:
+   
     ```sql
-    alter system set log_lock_waits = on;
-    alter system set deadlock_timeout = 200;
+        CREATE TABLE test_backup.document_template(
+        ID INTEGER NOT NULL,
+        NAME TEXT,
+        SHORT_DESCRIPTION TEXT,
+        AUTHOR TEXT,
+        DESCRIPTION TEXT,
+        CONTENT TEXT,
+        LAST_UPDATED DATE,
+        CREATED DATE);    
     ```
+    
+    И заполняю эту таблицу сгенерированными записями (100 строк) , для метода генерации случайных данных - использую ``random()`` и ``generate_series`` :
+
+```sql
+INSERT INTO test_backup.document_template(id,name, short_description, author, description,content, last_updated,created)
+SELECT id, 'name', md5(random()::text), 'name2'
+      ,md5(random()::text),md5(random()::text)
+      ,NOW() - '1 day'::INTERVAL * (RANDOM()::int * 100)
+      ,NOW() - '1 day'::INTERVAL * (RANDOM()::int * 100 + 100)
+FROM generate_series(1,100) id;
+```
+
+<br/><br/>
+
+    ![3](https://github.com/Y-M-Morozova/9_homework_Morozova_Yulia/assets/153178571/4ff1d4ae-e488-4410-a2e1-e5e89943ec04)
+
+    
