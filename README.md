@@ -75,11 +75,22 @@
         \copy test_backup.document_template to '/mnt/backup_otus/backup_copy_test_backup.document_template.sql';
     ```  
 
-   все ок, 100 строк скопировано:
+    все ок, 100 строк скопировано:
 
     ![11_1](https://github.com/Y-M-Morozova/9_homework_Morozova_Yulia/assets/153178571/29cb508e-bfa3-42c2-863b-ec071647d96e)
 
+    смотрю файл:
+
+    ![11_2](https://github.com/Y-M-Morozova/9_homework_Morozova_Yulia/assets/153178571/cf15da56-fe46-4972-803e-874284829db5)
+
+   
+
+        
+
+     
+
     
+
 
    
 
