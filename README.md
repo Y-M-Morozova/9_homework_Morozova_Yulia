@@ -83,7 +83,23 @@
 
     ![11_2](https://github.com/Y-M-Morozova/9_homework_Morozova_Yulia/assets/153178571/cf15da56-fe46-4972-803e-874284829db5)
 
-   
+5. Для восстановления данных из файла ``'/mnt/backup_otus/backup_copy_test_backup.document_template.sql'`` в другую таблицу, я сначала создаю эту новую таблицу скриптом:
+
+    ```sql
+        CREATE TABLE test_backup.document_template_for_copy(
+        ID INTEGER NOT NULL,
+        NAME TEXT,
+        SHORT_DESCRIPTION TEXT,
+        AUTHOR TEXT,
+        DESCRIPTION TEXT,
+        CONTENT TEXT,
+        LAST_UPDATED DATE,
+        CREATED DATE
+        );
+    ```
+
+    
+
 
         
 
