@@ -83,7 +83,9 @@
 
     ![11_2](https://github.com/Y-M-Morozova/9_homework_Morozova_Yulia/assets/153178571/cf15da56-fe46-4972-803e-874284829db5)
 
-5. Для восстановления данных из файла ``'/mnt/backup_otus/backup_copy_test_backup.document_template.sql'`` в другую таблицу, я сначала создаю эту новую таблицу скриптом:
+5. Для восстановления данных из файла ``'/mnt/backup_otus/backup_copy_test_backup.document_template.sql'`` в другую таблицу,
+
+    я сначала создаю эту новую таблицу командой:
 
     ```sql
         CREATE TABLE test_backup.document_template_for_copy(
@@ -97,6 +99,30 @@
         CREATED DATE
         );
     ```
+
+    а потом восстанавливаю данные командой:
+
+    ```sql
+        \copy test_backup.document_template_for_copy from '/mnt/backup_otus/backup_copy_test_backup.document_template.sql';
+    ```
+
+    100 строк скопировано:
+
+    ![11_4](https://github.com/Y-M-Morozova/9_homework_Morozova_Yulia/assets/153178571/d59ec6a9-bc0d-4ea9-88f0-a1c3a8e2847a)
+
+    проверяю селектом таблицу ``test_backup.document_template_for_copy`` :
+
+    ![11_5](https://github.com/Y-M-Morozova/9_homework_Morozova_Yulia/assets/153178571/c134f65d-9149-4baa-88e4-ff5cf483a8da)
+
+   
+   
+
+    
+
+
+
+
+    
 
     
 
