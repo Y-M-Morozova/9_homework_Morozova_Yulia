@@ -25,7 +25,7 @@
 
     ![1](https://github.com/Y-M-Morozova/9_homework_Morozova_Yulia/assets/153178571/fa1b6f4a-9012-437d-a95d-4a5ba24f4b40)
 
-    В этой схеме создаю таблицу скриптом:
+    В этой схеме создаю таблицу ``test_backup.document_template`` скриптом:
    
     ```sql
         CREATE TABLE test_backup.document_template(
@@ -63,6 +63,18 @@
     Определяю новый диск в системе, создаю раздел, файловую систему, создаю каталог ``/mnt/backup_otus/``и монтирую в него новый диск, делаю владельцем этого каталога ``/mnt/backup_otus/`` пользователя и группу     пользователя ``postgres`` и все ок - каталог на внешнем диске для бекапов готов:
 
     ![10_5](https://github.com/Y-M-Morozova/9_homework_Morozova_Yulia/assets/153178571/4cc9c258-7102-4bb0-94a7-d618e1540a7d)
+
+3. Делае логический бэкап таблицы ``test_backup.document_template`` , используя утилиту COPY, командой:
+
+     ```sql
+        \copy test_backup.document_template to '/mnt/backup_otus/backup_copy_test_backup.document_template.sql';
+    ```  
+
+   все ок, 100 строк скопировано:
+
+    ![11_1](https://github.com/Y-M-Morozova/9_homework_Morozova_Yulia/assets/153178571/29cb508e-bfa3-42c2-863b-ec071647d96e)
+
+    
 
    
 
