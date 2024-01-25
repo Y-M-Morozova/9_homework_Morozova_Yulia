@@ -100,6 +100,11 @@
         );
     ```
 
+    все ок:
+
+    ![11_3](https://github.com/Y-M-Morozova/9_homework_Morozova_Yulia/assets/153178571/d3802fd0-e42a-4a5e-b62f-db806ee992db)
+
+
     а потом восстанавливаю данные командой:
 
     ```sql
