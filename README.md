@@ -119,11 +119,13 @@
 
     ![11_5](https://github.com/Y-M-Morozova/9_homework_Morozova_Yulia/assets/153178571/c134f65d-9149-4baa-88e4-ff5cf483a8da)
 
-5. Для выполнения задания по созданию бекапов с помощью ``pg_dump`` беру две таблицы , которые созданы в пунктах выше в БД ``otus_backup``,схема ``test_backup``, это таблицы:  ``test_backup.document_template`` (в эту встаивла еще 100 строк, итого 200 строк) и ``test_backup.document_template_for_copy``(в этой оставила 100 строк):
+   <br/><br/>
+   
+6. Для выполнения задания по созданию бекапов с помощью ``pg_dump`` беру две таблицы , которые созданы в ДЗ пунктами выше в БД ``otus_backup``,схема ``test_backup``, это таблицы:  ``test_backup.document_template`` (в эту вставила еще 100 строк, итого 200 строк) и ``test_backup.document_template_for_copy``(в этой оставила 100 строк):
 
     ![17_1](https://github.com/Y-M-Morozova/9_homework_Morozova_Yulia/assets/153178571/74a010ad-2a38-4d39-ba2b-f03889691501)
 
-6. Согласно заданию, используя утилиту ``pg_dump``, создаю бэкап в кастомном сжатом формате двух таблиц, командой:
+7. Согласно заданию, используя утилиту ``pg_dump``, создаю бэкап в кастомном сжатом формате двух таблиц, командой:
 
     ``pg_dump -d otus_backup --compress=9 --table=test_backup.document_template --table=test_backup.document_template_for_copy -Fc > /mnt/backup_otus/backup_2_tables.gz``
 
@@ -135,11 +137,11 @@
     
     ![17_2](https://github.com/Y-M-Morozova/9_homework_Morozova_Yulia/assets/153178571/cd88ac63-3b54-4ba3-bce2-b130f81f9211)
 
-7. Согласно заданию, надо используя утилиту ``pg_restore`` восстановить в новую БД только вторую таблицу, то сначала создаю новую БД(назову её ``otus_restore`` ), потом создаю в ней схему (``test_backup``):
+8. Так как ,согласно заданию, надо используя утилиту ``pg_restore`` восстановить в новую БД только одну таблицу, то сначала создаю новую БД(назову её ``otus_restore`` ), потом создаю в ней схему (``test_backup``):
 
    ![17_3](https://github.com/Y-M-Morozova/9_homework_Morozova_Yulia/assets/153178571/75725c29-9f3d-4b29-b3e0-1ba1b5db641a)
 
-8. Восстанавливаю только одну таблицу по заданию, (выбрала ``test_backup.document_template_for_copy``, в которой 100 строк), команда для восстановления:
+9. Восстанавливаю только одну таблицу по заданию, (беру ``test_backup.document_template_for_copy``, в которой 100 строк), команда для восстановления:
 
     ```sql
         pg_restore -d otus_restore --table=document_template_for_copy /mnt/backup_otus/backup_2_tables.gz
