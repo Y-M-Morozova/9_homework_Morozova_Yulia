@@ -149,7 +149,11 @@
 
    ![17_7](https://github.com/Y-M-Morozova/9_homework_Morozova_Yulia/assets/153178571/5dc8c147-030a-4a95-b4ca-d3e9e9c5f7f5)
 
-   
+***
+
+**<div align=center><h3>Таким образом я в рамках этого домашнего задания тестирую два инструмента логического бекапа в postgres: команды COPY и PG_DUMP.</h3></div>**
+
+***   
 
 
    
