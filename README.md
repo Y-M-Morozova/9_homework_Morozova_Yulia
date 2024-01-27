@@ -135,9 +135,22 @@
     
     ![17_2](https://github.com/Y-M-Morozova/9_homework_Morozova_Yulia/assets/153178571/cd88ac63-3b54-4ba3-bce2-b130f81f9211)
 
-7. Согласно заданию, надо используя утилиту pg_restore восстановить в новую БД только вторую таблицу, то сначала создаю новую БД(назову её ``otus_restore`` ), потом создаю в ней схему (``test_backup``):
+7. Согласно заданию, надо используя утилиту ``pg_restore`` восстановить в новую БД только вторую таблицу, то сначала создаю новую БД(назову её ``otus_restore`` ), потом создаю в ней схему (``test_backup``):
 
    ![17_3](https://github.com/Y-M-Morozova/9_homework_Morozova_Yulia/assets/153178571/75725c29-9f3d-4b29-b3e0-1ba1b5db641a)
+
+8. Восстанавливаю только одну таблицу по заданию, (выбрала ``test_backup.document_template_for_copy``, в которой 100 строк), команда для восстановления:
+
+    ```sql
+        pg_restore -d otus_restore --table=document_template_for_copy /mnt/backup_otus/backup_2_tables.gz
+    ```
+    
+    подключаюсь к базе ``otus_restore``, проверяю таблицу ``test_backup.document_template_for_copy``, все ок, восстановилась, 100 строк:
+
+   ![17_7](https://github.com/Y-M-Morozova/9_homework_Morozova_Yulia/assets/153178571/5dc8c147-030a-4a95-b4ca-d3e9e9c5f7f5)
+
+   
+
 
    
 
