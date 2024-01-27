@@ -121,6 +121,11 @@
 
 5. Для выполнения задания по созданию бекапов с помощью ``pg_dump`` беру две таблицы , которые созданы в пунктах выше в БД ``otus_backup``,схема ``test_backup``, это таблицы:  ``test_backup.document_template`` и ``test_backup.document_template_for_copy``:
 
+    ![12_1](https://github.com/Y-M-Morozova/9_homework_Morozova_Yulia/assets/153178571/db39578b-49b9-47ec-85a0-ef0781e6ce68)
+
+
+   
+
    
 
 
