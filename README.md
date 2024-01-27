@@ -119,6 +119,8 @@
 
     ![11_5](https://github.com/Y-M-Morozova/9_homework_Morozova_Yulia/assets/153178571/c134f65d-9149-4baa-88e4-ff5cf483a8da)
 
+   6. Для выполнения задания по созданию бекапов с помощью ``pg_dump`` беру две таблицы, создданые выше:
+  
    
    
 
