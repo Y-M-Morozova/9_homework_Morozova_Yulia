@@ -119,9 +119,12 @@
 
     ![11_5](https://github.com/Y-M-Morozova/9_homework_Morozova_Yulia/assets/153178571/c134f65d-9149-4baa-88e4-ff5cf483a8da)
 
-5. Для выполнения задания по созданию бекапов с помощью ``pg_dump`` беру две таблицы , которые созданы в пунктах выше в БД ``otus_backup``,схема ``test_backup``, это таблицы:  ``test_backup.document_template`` и ``test_backup.document_template_for_copy``:
+5. Для выполнения задания по созданию бекапов с помощью ``pg_dump`` беру две таблицы , которые созданы в пунктах выше в БД ``otus_backup``,схема ``test_backup``, это таблицы:  ``test_backup.document_template`` (в эту встаивла еще 100 строк, итого 200 строк) и ``test_backup.document_template_for_copy``(в этой оставила 100 строк):
 
-    ![12_1](https://github.com/Y-M-Morozova/9_homework_Morozova_Yulia/assets/153178571/db39578b-49b9-47ec-85a0-ef0781e6ce68)
+    ![17_1](https://github.com/Y-M-Morozova/9_homework_Morozova_Yulia/assets/153178571/74a010ad-2a38-4d39-ba2b-f03889691501)
+
+   
+
 
 
    
