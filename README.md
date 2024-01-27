@@ -135,6 +135,14 @@
     
     ![17_2](https://github.com/Y-M-Morozova/9_homework_Morozova_Yulia/assets/153178571/cd88ac63-3b54-4ba3-bce2-b130f81f9211)
 
+7. Согласно заданию, надо используя утилиту pg_restore восстановить в новую БД только вторую таблицу, то сначала создаю новую БД(назову её ``otus_restore`` ), потом создаю в ней схему (``test_backup``):
+
+   ![17_3](https://github.com/Y-M-Morozova/9_homework_Morozova_Yulia/assets/153178571/75725c29-9f3d-4b29-b3e0-1ba1b5db641a)
+
+   
+
+
+    
    
 
     
