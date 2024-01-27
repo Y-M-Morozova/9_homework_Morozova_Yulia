@@ -125,10 +125,26 @@
 
 6. Согласно заданию, используя утилиту ``pg_dump``, создаю бэкап в кастомном сжатом формате двух таблиц, командой:
 
-```sql
-    pg_dump -d otus_backup --compress=9 --table=test_backup.document_template --table=test_backup.document_template_for_copy -Fc > /mnt/backup_otus/backup_2_tables.gz
-```
+    ``pg_dump -d otus_backup --compress=9 --table=test_backup.document_template --table=test_backup.document_template_for_copy -Fc > /mnt/backup_otus/backup_2_tables.gz``
 
+    далее смотрю размер файла в каталоге , а потом  проверяю содержимое бекапа командой: 
+
+    ``pg_restore --list /mnt/backup_otus/backup_2_tables.gz``
+ 
+    все ок:
+    
+    ![17_2](https://github.com/Y-M-Morozova/9_homework_Morozova_Yulia/assets/153178571/cd88ac63-3b54-4ba3-bce2-b130f81f9211)
+
+   
+
+    
+
+    
+
+    
+
+
+    
 
 
    
