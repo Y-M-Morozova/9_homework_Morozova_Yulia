@@ -123,6 +123,14 @@
 
     ![17_1](https://github.com/Y-M-Morozova/9_homework_Morozova_Yulia/assets/153178571/74a010ad-2a38-4d39-ba2b-f03889691501)
 
+6. Согласно заданию, используя утилиту ``pg_dump``, создаю бэкап в кастомном сжатом формате двух таблиц, командой:
+
+```sql
+    pg_dump -d otus_backup --compress=9 --table=test_backup.document_template --table=test_backup.document_template_for_copy -Fc > /mnt/backup_otus/backup_2_tables.gz
+```
+
+
+
    
 
 
